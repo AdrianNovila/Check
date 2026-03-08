@@ -4,4 +4,4 @@ This repository now includes a 50-item identification quiz based on the neurolog
 
 ## Open the quiz
 
-Open `/home/runner/work/Check/Check/index.html` in a browser to review the quiz.
+Open `index.html` from your local clone in a browser to review the quiz.
