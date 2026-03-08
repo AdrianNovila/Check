@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Neuro Identification Quiz</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f5f7fb;
+      --card: #ffffff;
+      --border: #d8deea;
+      --text: #172033;
+      --muted: #54627a;
+      --accent: #2a5bd7;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+    }
+
+    main {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 32px 20px 48px;
+    }
+
+    header {
+      margin-bottom: 24px;
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: 2rem;
+    }
+
+    .intro {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .summary {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 12px;
+      margin: 24px 0;
+    }
+
+    .summary-card,
+    .quiz-item {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      box-shadow: 0 8px 20px rgba(25, 44, 86, 0.06);
+    }
+
+    .summary-card {
+      padding: 16px;
+    }
+
+    .summary-card strong {
+      display: block;
+      font-size: 1.1rem;
+      color: var(--accent);
+    }
+
+    #quiz-list {
+      display: grid;
+      gap: 14px;
+    }
+
+    .quiz-item {
+      padding: 18px;
+    }
+
+    .quiz-item h2 {
+      margin: 0 0 10px;
+      font-size: 1rem;
+    }
+
+    .category {
+      display: inline-block;
+      margin-bottom: 10px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: #e8efff;
+      color: var(--accent);
+      font-size: 0.85rem;
+      font-weight: 700;
+    }
+
+    details {
+      margin-top: 10px;
+      border-top: 1px solid var(--border);
+      padding-top: 10px;
+    }
+
+    summary {
+      cursor: pointer;
+      font-weight: 700;
+      color: var(--accent);
+    }
+
+    .answer {
+      margin: 10px 0 0;
+      color: var(--text);
+    }
+
+    footer {
+      margin-top: 32px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Neuro Identification Quiz</h1>
+      <p class="intro">
+        50 items based on <strong>Neuro baby.pdf</strong>, covering the content from
+        <strong>Reye syndrome</strong> through <strong>carotid endarterectomy (CEA)</strong>.
+      </p>
+    </header>
+
+    <section class="summary" aria-label="Quiz summary">
+      <article class="summary-card">
+        <strong id="item-count">50 items</strong>
+        Identification questions
+      </article>
+      <article class="summary-card">
+        <strong>Start</strong>
+        Reye syndrome
+      </article>
+      <article class="summary-card">
+        <strong>Finish</strong>
+        Carotid endarterectomy (CEA)
+      </article>
+    </section>
+
+    <section id="quiz-list" aria-label="Identification quiz items"></section>
+
+    <footer>
+      Source: <em>Neuro baby.pdf</em>
+    </footer>
+  </main>
+
+  <script>
+    const quizItems = [
+      { category: "Reye syndrome", prompt: "A child develops swelling in the liver and brain after a viral infection such as flu or chickenpox. Identify the syndrome.", answer: "Reye syndrome" },
+      { category: "Reye syndrome", prompt: "In the clinical staging system, what stage includes vomiting, liver dysfunction, lethargy, and sleepiness?", answer: "Stage 1 of Reye syndrome" },
+      { category: "Reye syndrome", prompt: "Deep lethargy, confusion, delirium, combativeness, hyperventilation, and hyperreflexia point to what stage of Reye syndrome?", answer: "Stage 2" },
+      { category: "Reye syndrome", prompt: "An obtunded child in a light coma with decorticate rigidity is in what stage of Reye syndrome?", answer: "Stage 3" },
+      { category: "Reye syndrome", prompt: "Deepening coma, seizures, decerebrate rigidity, fixed pupils, and loss of oculovestibular reflexes indicate which Reye syndrome stage?", answer: "Stage 4" },
+      { category: "Reye syndrome", prompt: "Seizures, deep coma, flaccid paralysis, absent deep tendon reflexes, respiratory arrest, and fixed dilated pupils identify what Reye syndrome stage?", answer: "Stage 5" },
+      { category: "Reye syndrome", prompt: "What medication use during a viral illness is most commonly linked to triggering Reye syndrome?", answer: "Aspirin" },
+      { category: "Reye syndrome", prompt: "What inherited fatty-acid oxidation disorder is listed as a trigger associated with Reye syndrome?", answer: "Medium-chain acyl-CoA dehydrogenase (MCAD) deficiency" },
+      { category: "Reye syndrome", prompt: "The CDC criteria describe acute noninflammatory encephalopathy with altered consciousness and what type of organ dysfunction?", answer: "Hepatic dysfunction" },
+      { category: "Reye syndrome", prompt: "What is the recommended overall treatment approach for Reye syndrome in the source material?", answer: "Supportive care" },
+      { category: "Multiple sclerosis", prompt: "Identify the immune-mediated progressive demyelinating disease of the central nervous system described in the notes.", answer: "Multiple sclerosis" },
+      { category: "Multiple sclerosis", prompt: "What alternate name is given for multiple sclerosis in the Neuro file?", answer: "Disseminated sclerosis" },
+      { category: "Multiple sclerosis", prompt: "This disorder is described as a major cause of chronic disability in young adults aged about 20 to 40. Identify it.", answer: "Multiple sclerosis" },
+      { category: "Multiple sclerosis", prompt: "Which imaging study is used to visualize small plaques and evaluate treatment effects in multiple sclerosis?", answer: "MRI" },
+      { category: "Multiple sclerosis", prompt: "What CSF-related diagnostic method is used to identify abnormal IgG in multiple sclerosis?", answer: "Electrophoresis" },
+      { category: "Multiple sclerosis", prompt: "Which imaging sequence can detect two or three times the number of lesions seen on MRI in multiple sclerosis?", answer: "Fluid-attenuated inversion-recovery (FLAIR)" },
+      { category: "Multiple sclerosis", prompt: "A decreased N-acetyl aspartate level on magnetic resonance spectroscopy suggests what type of damage in multiple sclerosis?", answer: "Axonal damage" },
+      { category: "Multiple sclerosis", prompt: "Which immunomodulating drug example is listed for slowing multiple sclerosis progression and relapse?", answer: "Interferon beta-1a (Avonex)" },
+      { category: "Multiple sclerosis", prompt: "Which immunosuppressant drug is specifically named for multiple sclerosis management?", answer: "Mitoxantrone (Novantrone)" },
+      { category: "Multiple sclerosis", prompt: "Which muscle relaxant is listed for spasticity in multiple sclerosis?", answer: "Baclofen (Lioresal)" },
+      { category: "Trigeminal neuralgia", prompt: "Identify the disorder of the fifth cranial nerve that is also called tic douloureux.", answer: "Trigeminal neuralgia" },
+      { category: "Trigeminal neuralgia", prompt: "Trigeminal neuralgia most commonly affects which branches of the trigeminal nerve?", answer: "The second and third branches" },
+      { category: "Trigeminal neuralgia", prompt: "What demyelinating disease is listed as a possible cause or risk factor for trigeminal neuralgia?", answer: "Multiple sclerosis" },
+      { category: "Trigeminal neuralgia", prompt: "A unilateral shooting and stabbing facial pain that starts and ends abruptly is characteristic of what condition?", answer: "Trigeminal neuralgia" },
+      { category: "Trigeminal neuralgia", prompt: "Washing the face, shaving, brushing the teeth, eating, and drinking can trigger paroxysms of what disorder?", answer: "Trigeminal neuralgia" },
+      { category: "Trigeminal neuralgia", prompt: "Which anticonvulsant is listed first-line for pain relief in trigeminal neuralgia?", answer: "Carbamazepine (Tegretol)" },
+      { category: "Trigeminal neuralgia", prompt: "What serious long-term adverse effect should be monitored during carbamazepine therapy for trigeminal neuralgia?", answer: "Bone marrow depression" },
+      { category: "Trigeminal neuralgia", prompt: "Which surgery relieves contact between a cerebral vessel and the trigeminal nerve root entry?", answer: "Microvascular decompression of the trigeminal nerve" },
+      { category: "Trigeminal neuralgia", prompt: "Which procedure produces a thermal lesion on the trigeminal nerve?", answer: "Percutaneous radiofrequency thermal coagulation" },
+      { category: "Trigeminal neuralgia", prompt: "Which percutaneous procedure compresses the trigeminal nerve root with a contrast-filled balloon for about 1 minute?", answer: "Percutaneous balloon microcompression" },
+      { category: "Myasthenia gravis", prompt: "Identify the chronic autoimmune progressive neuromuscular disease that causes abnormal weakness and fatigability of voluntary muscles.", answer: "Myasthenia gravis" },
+      { category: "Myasthenia gravis", prompt: "What bedside diagnostic test uses edrophonium chloride to temporarily improve facial weakness and ptosis?", answer: "Acetylcholinesterase inhibitor test (Tensilon test)" },
+      { category: "Myasthenia gravis", prompt: "In myasthenia gravis, a positive serum assay shows increased circulating antibodies against what receptor?", answer: "The acetylcholine receptor" },
+      { category: "Myasthenia gravis", prompt: "What simple bedside assessment may resolve ptosis after ice is held over the eye for 1 minute?", answer: "Ice test" },
+      { category: "Myasthenia gravis", prompt: "Which study shows a reduced response to electrical stimulation in myasthenia gravis?", answer: "Electromyography" },
+      { category: "Myasthenia gravis", prompt: "Which anticholinesterase medication is given as an example to increase available acetylcholine at the neuromuscular junction?", answer: "Pyridostigmine bromide (Mestinon)" },
+      { category: "Myasthenia gravis", prompt: "What immunosuppressive therapy example is listed to decrease antibody production in myasthenia gravis?", answer: "Corticosteroids" },
+      { category: "Myasthenia gravis", prompt: "Which cytotoxic medication is named for lowering circulating anti-acetylcholine receptor antibodies in myasthenia gravis?", answer: "Cyclophosphamide (Cytoxan)" },
+      { category: "Myasthenia gravis", prompt: "What procedure is used to treat exacerbations by removing plasma components in myasthenia gravis?", answer: "Therapeutic plasma exchange (plasmapheresis)" },
+      { category: "Myasthenia gravis", prompt: "What surgery may produce antigen-specific immunosuppression in myasthenia gravis?", answer: "Thymectomy" },
+      { category: "Cerebrovascular disorders", prompt: "Identify the primary cerebrovascular disorder in the notes and the second leading cause of death worldwide.", answer: "Stroke" },
+      { category: "Cerebrovascular disorders", prompt: "What type of stroke is defined as brain damage due to a clogged artery?", answer: "Ischemic stroke" },
+      { category: "Cerebrovascular disorders", prompt: "What type of stroke results from a blood vessel bursting and leaking blood into brain tissue?", answer: "Hemorrhagic stroke" },
+      { category: "Neurologic deficits", prompt: "Loss of half of the visual field after stroke is identified as what neurologic deficit?", answer: "Homonymous hemianopsia" },
+      { category: "Neurologic deficits", prompt: "Weakness of the face, arm, and leg on the same side due to a lesion in the opposite hemisphere is called what?", answer: "Hemiparesis" },
+      { category: "Neurologic deficits", prompt: "Paralysis of the face, arm, and leg on the same side is called what?", answer: "Hemiplegia" },
+      { category: "Neurologic deficits", prompt: "A staggering, unsteady gait with a broad base to stand describes what motor deficit?", answer: "Ataxia" },
+      { category: "Neurologic deficits", prompt: "Difficulty in forming words after a neurologic event is identified as what deficit?", answer: "Dysarthria" },
+      { category: "Stroke management", prompt: "Temporary episodes of neurologic dysfunction lasting no longer than 24 hours with complete recovery are called what?", answer: "Transient ischemic attacks (TIA)" },
+      { category: "Stroke management", prompt: "What surgical procedure removes an atherosclerotic plaque or thrombus from the carotid artery?", answer: "Carotid endarterectomy (CEA)" }
+    ];
+
+    const list = document.getElementById("quiz-list");
+    const count = document.getElementById("item-count");
+
+    count.textContent = `${quizItems.length} items`;
+
+    quizItems.forEach((item, index) => {
+      const card = document.createElement("article");
+      card.className = "quiz-item";
+      card.innerHTML = `
+        <div class="category">${item.category}</div>
+        <h2>${index + 1}. ${item.prompt}</h2>
+        <details>
+          <summary>Show answer</summary>
+          <p class="answer">${item.answer}</p>
+        </details>
+      `;
+      list.appendChild(card);
+    });
+  </script>
+</body>
+</html>
