@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Neuro Nursing – Identification Quiz (Reye Syndrome to CEA)</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #f0f4f8;
+      color: #1a1a2e;
+      line-height: 1.7;
+    }
+
+    header {
+      background: linear-gradient(135deg, #1a1a2e, #16213e);
+      color: #e0e0e0;
+      padding: 36px 24px 28px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 1.75rem;
+      letter-spacing: 0.5px;
+      margin-bottom: 6px;
+    }
+
+    header p {
+      font-size: 0.95rem;
+      color: #a8b8d0;
+    }
+
+    .container {
+      max-width: 860px;
+      margin: 36px auto;
+      padding: 0 18px 60px;
+    }
+
+    .instructions {
+      background: #fff;
+      border-left: 5px solid #4a90d9;
+      padding: 16px 20px;
+      border-radius: 6px;
+      margin-bottom: 32px;
+      font-size: 0.95rem;
+      color: #333;
+    }
+
+    .instructions strong { color: #1a1a2e; }
+
+    .quiz-section {
+      background: #fff;
+      border-radius: 10px;
+      padding: 28px 32px;
+      margin-bottom: 32px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+    }
+
+    .section-label {
+      display: inline-block;
+      background: #1a1a2e;
+      color: #fff;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 4px;
+      margin-bottom: 18px;
+    }
+
+    .question {
+      display: flex;
+      gap: 14px;
+      padding: 12px 0;
+      border-bottom: 1px solid #eef0f4;
+    }
+
+    .question:last-child { border-bottom: none; }
+
+    .q-number {
+      flex-shrink: 0;
+      font-weight: 700;
+      color: #4a90d9;
+      min-width: 32px;
+      font-size: 1rem;
+    }
+
+    .q-text {
+      flex: 1;
+      font-size: 0.97rem;
+    }
+
+    .blank {
+      display: inline-block;
+      min-width: 160px;
+      border-bottom: 2px solid #4a90d9;
+      vertical-align: bottom;
+    }
+
+    /* Answer Key */
+    .answer-section {
+      background: #1a1a2e;
+      color: #e0e0e0;
+      border-radius: 10px;
+      padding: 28px 32px;
+      margin-top: 40px;
+    }
+
+    .answer-section h2 {
+      color: #7ec8e3;
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+      border-bottom: 1px solid #2d3a50;
+      padding-bottom: 10px;
+    }
+
+    .answer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 10px 24px;
+    }
+
+    .answer-item {
+      font-size: 0.9rem;
+      padding: 6px 0;
+      border-bottom: 1px solid #2d3a50;
+    }
+
+    .answer-item span {
+      color: #7ec8e3;
+      font-weight: 700;
+      margin-right: 6px;
+    }
+
+    footer {
+      text-align: center;
+      color: #888;
+      font-size: 0.82rem;
+      padding-bottom: 30px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Nursing Care of Clients with Neurologic Problems</h1>
+  <p>50-Item Identification Quiz &nbsp;|&nbsp; Reye's Syndrome → Carotid Endarterectomy (CEA)</p>
+</header>
+
+<div class="container">
+
+  <div class="instructions">
+    <strong>Directions:</strong> Identify the term, condition, drug, or concept being described in each item.
+    Write your answer on the line provided. The answer key appears at the end of the quiz.
+  </div>
+
+  <!-- ───────── Section 1: Reye's Syndrome ───────── -->
+  <div class="quiz-section">
+    <span class="section-label">Reye's Syndrome</span>
+
+    <div class="question">
+      <div class="q-number">1.</div>
+      <div class="q-text">A rare but serious condition that causes swelling in the liver and brain, most commonly occurring in children after a viral infection such as the flu or chickenpox. <span class="blank"></span></div>
+    </div>
+
+    <div class="question">
+      <div class="q-number">2.</div>
+      <div class="q-text">The medication whose use during a viral illness has most commonly been linked to Reye's syndrome. <span class="blank"></span></div>
+    </div>
+
+    <div class="question">
+      <div class="q-number">3.</div>
+      <div class="q-text">In Reye's syndrome staging, Stage 1 is characterized by vomiting, laboratory evidence of liver dysfunction, and this level of consciousness. <span class="blank"></span></div>
+    </div>
+
+    <div class="question">
+      <div class="q-number">4.</div>
+      <div class="q-text">The Reye's syndrome stage defined by deep coma, flaccid paralysis, absent deep tendon reflexes, respiratory arrest, and fixed dilated pupils. <span class="blank"></span></div>
+    </div>
+
+    <div class="question">
+      <div class="q-number">5.</div>
+      <div class="q-text">An inherited metabolic disorder in which the body is unable to break down fatty acids due to a missing or non-functioning enzyme; having this disorder increases the risk of Reye's syndrome when aspirin is used during a viral illness. <span class="blank"></span></div>
+    </div>
+
+    <div class="question">
+      <div class="q-number">6.</div>
+      <div class="q-text">The CDC diagnostic criterion for Reye's syndrome that requires less than or equal to 8 WBC/mm³ in this fluid. <span class="blank"></span></div>
+    </div>
+
+    <div class="question">
+      <div class="q-number">7.</div>
+      <div class="q-text">The liver enzyme whose levels, along with AST and ammonia, must be elevated more than 3-fold above normal to meet CDC diagnostic criteria for Reye's syndrome. <span class="blank"></span></div>
+    </div>
+
+    <div class="question">
+      <div class="q-number">8.</div>
+      <div class="q-text">In Reye's syndrome management, this drug has been given to decrease cerebral metabolic demands in patients with cerebral edema. <span class="blank"></span></div>
+    </div>
+  </div>
+
+  <!-- ───────── Section 2: Multiple Sclerosis ───────── -->
+  <div class="quiz-section">
+    <span class="section-label">Multiple Sclerosis</span>
+
+    <div class="question">
+      <div class="q-number">9.</div>
+      <div class="q-text">An immune-mediated progressive disease of the CNS characterized by small patches of demyelination in the brain and spinal cord; also known as disseminated sclerosis. <span class="blank"></span></div>
+    </div>
+
+    <div class="question">
+      <div class="q-number">10.</div>
+      <div class="q-text">The age range during which onset of multiple sclerosis symptoms usually occurs. <span class="blank"></span></div>
+    </div>
+
+    <div class="question">
+      <div class="q-number">11.</div>
+      <div class="q-text">The primary imaging diagnostic tool used to visualize small plaques in multiple sclerosis and evaluate the cause and effects of treatment. <span class="blank"></span></div>
+    </div>
+
+    <div class="question">
+      <div class="q-number">12.</div>
+      <div class="q-text">The diagnostic technique that uses CSF electrophoresis and detects abnormal IgG, able to identify MS in up to 95% of patients. <span class="blank"></span></div>
+    </div>
+
+    <div class="question">
+      <div class="q-number">13.</div>
+      <div class="q-text">The diagnostic method that can detect two to three times the number of lesions seen in MRI; abbreviated FLAIR. <span class="blank"></span></div>
+    </div>
+
+    <div class="question">
+      <div class="q-number">14.</div>
+      <div class="q-text">The molecule whose decreased level in Magnetic Resonance Spectroscopy suggests the presence of axonal damage in MS. <span class="blank"></span></div>
+    </div>
+
+    <div class="question">
+      <div class="q-number">15.</div>
+      <div class="q-text">The immunomodulating drug (brand name Avonex) used to slow the progression of multiple sclerosis and reduce relapses. <span class="blank"></span></div>
+    </div>
+
+    <div class="question">
+      <div class="q-number">16.</div>
+      <div class="q-text">The immunosuppressant drug (brand name Novantrone) used to slow the progression of multiple sclerosis. <span class="blank"></span></div>
+    </div>
+
+    <div class="question">
+      <div class="q-number">17.</div>
+      <div class="q-text">The muscle relaxant drug (brand name Lioresal) used to manage spasticity in multiple sclerosis. <span class="blank"></span></div>
+    </div>
+  </div>
+
+  <!-- ───────── Section 3: Trigeminal Neuralgia ───────── -->
+  <div class="quiz-section">
+    <span class="section-label">Trigeminal Neuralgia</span>
+
+    <div class="question">
+      <div class="q-number">18.</div>
+      <div class="q-text">A condition of the fifth cranial nerve characterized by paroxysms of pain in the area innervated by any of its three branches; also called Tic Douloureux. <span class="blank"></span></div>
+    </div>
+
+    <div class="question">
+      <div class="q-number">19.</div>
+      <div class="q-text">The anticonvulsant drug (brand name Tegretol) that relieves pain in trigeminal neuralgia by reducing the transmission of impulses at nerve terminals. <span class="blank"></span></div>
+    </div>
+
+    <div class="question">
+      <div class="q-number">20.</div>
+      <div class="q-text">The adverse effect that must be monitored during long-term carbamazepine therapy in trigeminal neuralgia. <span class="blank"></span></div>
+    </div>
+
+    <div class="question">
+      <div class="q-number">21.</div>
+      <div class="q-text">The intracranial surgical approach used to decompress the trigeminal nerve by relieving contact between the cerebral vessel and the trigeminal nerve root entry. <span class="blank"></span></div>
+    </div>
+
+    <div class="question">
+      <div class="q-number">22.</div>
+      <div class="q-text">The percutaneous surgical procedure for trigeminal neuralgia that produces a thermal lesion on the trigeminal nerve, though it may cause dysesthesia and loss of corneal reflex. <span class="blank"></span></div>
+    </div>
+
+    <div class="question">
+      <div class="q-number">23.</div>
+      <div class="q-text">The surgical procedure for trigeminal neuralgia that disrupts large myelinated fibers of all three branches by compressing the nerve root for 1 minute using a balloon filled with contrast material. <span class="blank"></span></div>
+    </div>
+  </div>
+
+  <!-- ───────── Section 4: Myasthenia Gravis ───────── -->
+  <div class="quiz-section">
+    <span class="section-label">Myasthenia Gravis</span>
+
+    <div class="question">
+      <div class="q-number">24.</div>
+      <div class="q-text">A chronic autoimmune, progressive neuromuscular disease characterized by an abnormal degree of weakness and fatigability of the skeletal (voluntary) muscles. <span class="blank"></span></div>
+    </div>
+
+    <div class="question">
+      <div class="q-number">25.</div>
+      <div class="q-text">The drug (brand name Tensilon) administered IV to diagnose myasthenia gravis; facial muscle weakness and ptosis should resolve within 30 seconds of injection. <span class="blank"></span></div>
+    </div>
+
+    <div class="question">
+      <div class="q-number">26.</div>
+      <div class="q-text">The diagnostic test for myasthenia gravis in which ice is held over the patient's eye for 1 minute; a positive result is resolution of ptosis. <span class="blank"></span></div>
+    </div>
+
+    <div class="question">
+      <div class="q-number">27.</div>
+      <div class="q-text">The drug (brand name Mestinon) used as first-line therapy in myasthenia gravis to increase the relative concentration of available acetylcholine at the neuromuscular junction. <span class="blank"></span></div>
+    </div>
+
+    <div class="question">
+      <div class="q-number">28.</div>
+      <div class="q-text">The cytotoxic drug (brand name Cytoxan) used in myasthenia gravis to decrease circulating anti-acetylcholine receptor antibodies. <span class="blank"></span></div>
+    </div>
+
+    <div class="question">
+      <div class="q-number">29.</div>
+      <div class="q-text">The IV therapy administered to treat exacerbations of myasthenia gravis; abbreviated IVIG. <span class="blank"></span></div>
+    </div>
+
+    <div class="question">
+      <div class="q-number">30.</div>
+      <div class="q-text">The surgical procedure used in myasthenia gravis that can produce antigen-specific immunosuppression, though the patient may not benefit until up to 1 year after the operation. <span class="blank"></span></div>
+    </div>
+  </div>
+
+  <!-- ───────── Section 5: Cerebrovascular Disorders ───────── -->
+  <div class="quiz-section">
+    <span class="section-label">Cerebrovascular Disorders &amp; Stroke</span>
+
+    <div class="question">
+      <div class="q-number">31.</div>
+      <div class="q-text">The primary cerebrovascular disorder and the second leading cause of death worldwide. <span class="blank"></span></div>
+    </div>
+
+    <div class="question">
+      <div class="q-number">32.</div>
+      <div class="q-text">The type of stroke caused by a clogged or blocked artery that damages the brain tissue due to inadequate blood supply. <span class="blank"></span></div>
+    </div>
+
+    <div class="question">
+      <div class="q-number">33.</div>
+      <div class="q-text">The type of stroke caused by a blood vessel that bursts and leaks blood into the brain tissues. <span class="blank"></span></div>
+    </div>
+
+    <div class="question">
+      <div class="q-number">34.</div>
+      <div class="q-text">Temporary episodes of neurologic dysfunction lasting seconds to minutes but not longer than 24 hours, with complete recovery between attacks. <span class="blank"></span></div>
+    </div>
+
+    <div class="question">
+      <div class="q-number">35.</div>
+      <div class="q-text">The type of stroke in which neurologic deficits are consistent but more pronounced than a TIA and last more than 24 hours; also called Reversible Ischemic Neurologic Deficit. <span class="blank"></span></div>
+    </div>
+
+    <div class="question">
+      <div class="q-number">36.</div>
+      <div class="q-text">The term used to describe a stroke that is currently progressing; also called "progressing stroke." <span class="blank"></span></div>
+    </div>
+  </div>
+
+  <!-- ───────── Section 6: Neurologic Deficit Manifestations ───────── -->
+  <div class="quiz-section">
+    <span class="section-label">Neurologic Deficit Manifestations</span>
+
+    <div class="question">
+      <div class="q-number">37.</div>
+      <div class="q-text">The visual field deficit characterized by loss of half of the visual field; the patient may be unaware of persons or objects on the affected side and have difficulty judging distances. <span class="blank"></span></div>
+    </div>
+
+    <div class="question">
+      <div class="q-number">38.</div>
+      <div class="q-text">A motor deficit characterized by weakness of the face, arm, and leg on the same side of the body, caused by a lesion in the opposite hemisphere. <span class="blank"></span></div>
+    </div>
+
+    <div class="question">
+      <div class="q-number">39.</div>
+      <div class="q-text">A motor deficit characterized by complete paralysis of the face, arm, and leg on the same side of the body, caused by a lesion in the opposite hemisphere. <span class="blank"></span></div>
+    </div>
+
+    <div class="question">
+      <div class="q-number">40.</div>
+      <div class="q-text">The motor deficit manifested by a staggering, unsteady gait in which the patient is unable to keep feet together and requires a broad base to stand. <span class="blank"></span></div>
+    </div>
+
+    <div class="question">
+      <div class="q-number">41.</div>
+      <div class="q-text">A motor deficit defined as difficulty in forming words after a stroke. <span class="blank"></span></div>
+    </div>
+
+    <div class="question">
+      <div class="q-number">42.</div>
+      <div class="q-text">A deficit defined as difficulty in swallowing, which may occur following a stroke. <span class="blank"></span></div>
+    </div>
+
+    <div class="question">
+      <div class="q-number">43.</div>
+      <div class="q-text">The sensory deficit occurring on the side opposite the lesion, manifested by numbness, tingling of an extremity, and difficulty with proprioception. <span class="blank"></span></div>
+    </div>
+
+    <div class="question">
+      <div class="q-number">44.</div>
+      <div class="q-text">The type of aphasia in which the patient is unable to form words that are understandable and may only be able to speak in single-word responses. <span class="blank"></span></div>
+    </div>
+
+    <div class="question">
+      <div class="q-number">45.</div>
+      <div class="q-text">The type of aphasia in which the patient is unable to comprehend the spoken word; the patient can speak but may not make sense. <span class="blank"></span></div>
+    </div>
+
+    <div class="question">
+      <div class="q-number">46.</div>
+      <div class="q-text">The type of aphasia that is a combination of both receptive and expressive aphasia. <span class="blank"></span></div>
+    </div>
+  </div>
+
+  <!-- ───────── Section 7: Medical/Surgical Management (Stroke & CEA) ───────── -->
+  <div class="quiz-section">
+    <span class="section-label">Medical &amp; Surgical Management — Stroke &amp; CEA</span>
+
+    <div class="question">
+      <div class="q-number">47.</div>
+      <div class="q-text">The thrombolytic drug used for ischemic stroke, administered at a minimum dose of 0.9 mg/kg with a maximum dose of 90 mg; the loading dose is 10% of the calculated dose administered over 1 minute. <span class="blank"></span></div>
+    </div>
+
+    <div class="question">
+      <div class="q-number">48.</div>
+      <div class="q-text">The most common side effect of recombinant t-PA thrombolytic therapy in stroke management. <span class="blank"></span></div>
+    </div>
+
+    <div class="question">
+      <div class="q-number">49.</div>
+      <div class="q-text">The osmotic diuretic used to reduce intracranial pressure (ICP) in stroke management. <span class="blank"></span></div>
+    </div>
+
+    <div class="question">
+      <div class="q-number">50.</div>
+      <div class="q-text">The surgical procedure involving reopening of an artery obstructed by atheroma and removal of an atherosclerotic plaque or thrombus from the carotid artery; abbreviated CEA. <span class="blank"></span></div>
+    </div>
+
+  </div>
+
+  <!-- ───────── ANSWER KEY ───────── -->
+  <div class="answer-section">
+    <h2>✦ Answer Key</h2>
+    <div class="answer-grid">
+      <div class="answer-item"><span>1.</span> Reye's Syndrome</div>
+      <div class="answer-item"><span>2.</span> Aspirin</div>
+      <div class="answer-item"><span>3.</span> Lethargic / Sleepy</div>
+      <div class="answer-item"><span>4.</span> Stage 5</div>
+      <div class="answer-item"><span>5.</span> Medium-chain acyl-CoA dehydrogenase (MCAD) deficiency</div>
+      <div class="answer-item"><span>6.</span> Cerebrospinal Fluid (CSF)</div>
+      <div class="answer-item"><span>7.</span> Alanine aminotransferase (ALT)</div>
+      <div class="answer-item"><span>8.</span> Pentobarbital</div>
+      <div class="answer-item"><span>9.</span> Multiple Sclerosis (MS)</div>
+      <div class="answer-item"><span>10.</span> 20 to 40 years old</div>
+      <div class="answer-item"><span>11.</span> MRI (Magnetic Resonance Imaging)</div>
+      <div class="answer-item"><span>12.</span> Electrophoresis</div>
+      <div class="answer-item"><span>13.</span> Fluid-Attenuated Inversion Recovery (FLAIR)</div>
+      <div class="answer-item"><span>14.</span> N-Acetyl Aspartate (NAA)</div>
+      <div class="answer-item"><span>15.</span> Interferon beta-1a (Avonex)</div>
+      <div class="answer-item"><span>16.</span> Mitoxantrone (Novantrone)</div>
+      <div class="answer-item"><span>17.</span> Baclofen (Lioresal)</div>
+      <div class="answer-item"><span>18.</span> Trigeminal Neuralgia (Tic Douloureux)</div>
+      <div class="answer-item"><span>19.</span> Carbamazepine (Tegretol)</div>
+      <div class="answer-item"><span>20.</span> Bone marrow depression / Aplastic anemia</div>
+      <div class="answer-item"><span>21.</span> Microvascular Decompression of the Trigeminal Nerve</div>
+      <div class="answer-item"><span>22.</span> Percutaneous Radiofrequency Thermal Coagulation</div>
+      <div class="answer-item"><span>23.</span> Percutaneous Balloon Microcompression</div>
+      <div class="answer-item"><span>24.</span> Myasthenia Gravis</div>
+      <div class="answer-item"><span>25.</span> Edrophonium chloride (Tensilon)</div>
+      <div class="answer-item"><span>26.</span> Ice Test</div>
+      <div class="answer-item"><span>27.</span> Pyridostigmine bromide (Mestinon)</div>
+      <div class="answer-item"><span>28.</span> Cyclophosphamide (Cytoxan)</div>
+      <div class="answer-item"><span>29.</span> Intravenous Immune Globulin (IVIG)</div>
+      <div class="answer-item"><span>30.</span> Thymectomy</div>
+      <div class="answer-item"><span>31.</span> Stroke (Cerebrovascular Accident)</div>
+      <div class="answer-item"><span>32.</span> Ischemic Stroke</div>
+      <div class="answer-item"><span>33.</span> Hemorrhagic Stroke</div>
+      <div class="answer-item"><span>34.</span> Transient Ischemic Attack (TIA)</div>
+      <div class="answer-item"><span>35.</span> Reversible Ischemic Neurologic Deficit (RIND)</div>
+      <div class="answer-item"><span>36.</span> Stroke in Evolution</div>
+      <div class="answer-item"><span>37.</span> Homonymous Hemianopsia</div>
+      <div class="answer-item"><span>38.</span> Hemiparesis</div>
+      <div class="answer-item"><span>39.</span> Hemiplegia</div>
+      <div class="answer-item"><span>40.</span> Ataxia</div>
+      <div class="answer-item"><span>41.</span> Dysarthria</div>
+      <div class="answer-item"><span>42.</span> Dysphagia</div>
+      <div class="answer-item"><span>43.</span> Paresthesia</div>
+      <div class="answer-item"><span>44.</span> Expressive Aphasia</div>
+      <div class="answer-item"><span>45.</span> Receptive Aphasia</div>
+      <div class="answer-item"><span>46.</span> Global (Mixed) Aphasia</div>
+      <div class="answer-item"><span>47.</span> Recombinant t-PA (Alteplase)</div>
+      <div class="answer-item"><span>48.</span> Bleeding</div>
+      <div class="answer-item"><span>49.</span> Mannitol</div>
+      <div class="answer-item"><span>50.</span> Carotid Endarterectomy (CEA)</div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  NCM 3116 — Nursing Care of Clients with Neurologic Problems &nbsp;|&nbsp; Quiz based on <em>Neuro baby.pdf</em>
+</footer>
+
+</body>
+</html>
